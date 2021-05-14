@@ -5,6 +5,15 @@ services:
         build: ./app
         ports:
             - "9000:9000"
+        links:
+            - bbox
+
+    bbox:
+        image: arqsoft/bbox:202101.1
+        ports:
+            - "9090:9090"
+        volumes:
+            - ./bbox.properties:/opt/bbox/config.properties
 
     nginx:
         image: nginx:1.19.8
