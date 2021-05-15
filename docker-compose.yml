@@ -3,8 +3,6 @@ version: '2'
 services:
     node:
         build: ./app
-        ports:
-            - "9000:9000"
         links:
             - bbox
 
@@ -12,6 +10,7 @@ services:
         image: arqsoft/bbox:202101.1
         ports:
             - "9090:9090"
+            - "9091:9091"
         volumes:
             - ./bbox.properties:/opt/bbox/config.properties
 
