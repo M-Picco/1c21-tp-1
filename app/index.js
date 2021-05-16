@@ -21,4 +21,13 @@ server.get('/service-b', (req, res) => {
     });
 })
 
+server.get('/loop', (req, res) => {
+    var stop = new Date().getTime()+5000;
+    while (new Date().getTime() < stop) {
+        var number = 57361671;
+        var result = number/7;
+    }
+})
+
+
 server.listen(PORT, () => console.log(`started server at ${PORT}`))

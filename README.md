@@ -266,3 +266,10 @@ docc exec SERVICE COMMAND
 # Versión instalada
 docc version
 ```
+
+
+## Hacer funcionar graphana - graphite
+
+Meterse a localhost:80 que te lleva a graphana. Ir a la configurations, data-sources. Elegir graphite y poner como url http://graphite:80
+
+Despues ir a dashboards, import y traerse el dashboard.json que está en la carpeta perf.
