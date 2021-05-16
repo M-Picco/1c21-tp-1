@@ -3,16 +3,25 @@ version: '2'
 services:
     node:
         build: ./app
+        ports:
+            - "9000:9000"
         links:
             - bbox
+        volumes:
+            - ./app:/app
+        networks:
+            - network_1
 
     bbox:
+        container_name: "bbox"
         image: arqsoft/bbox:202101.1
         ports:
             - "9090:9090"
             - "9091:9091"
         volumes:
             - ./bbox.properties:/opt/bbox/config.properties
+        networks:
+            - network_1
 
     nginx:
         image: nginx:1.19.8
@@ -57,3 +66,6 @@ services:
 volumes:
     grafana_config:
         driver: local
+
+networks:
+    network_1:
