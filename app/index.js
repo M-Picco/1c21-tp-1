@@ -26,6 +26,9 @@ server.get('/loop', (req, res) => {
     while (new Date().getTime() < stop) {
         var number = 57361671;
         var result = number/7;
+        if (result > 0){
+            //
+        }
     }
 })
 

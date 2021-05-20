@@ -20,7 +20,7 @@ config:
       arrivalRate: 100
 
 scenarios:
-  - name: Service A (/)
+  - name: Service B (/service-b)
     flow:
       - get:
-          url: '/service-a'
+          url: '/service-b'
