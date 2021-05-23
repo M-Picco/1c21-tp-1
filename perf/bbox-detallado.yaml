@@ -1,0 +1,61 @@
+config:
+  environments:
+    9090:
+      target: 'http://localhost:9090'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-bbox"
+
+
+  pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
+
+  phases:
+      - name: Plain
+        duration: 20
+        arrivalRate: 1
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 2
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 3
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 4
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 5
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 6
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 7
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 8
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 9
+      - pause: 20
+      - name: Plain
+        duration: 20
+        arrivalRate: 10
+
+
+
+scenarios:
+  - name: bbox
+    flow:
+      - get:
+          url: '/'
