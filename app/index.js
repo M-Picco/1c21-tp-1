@@ -10,13 +10,13 @@ server.get('/ping', (req, res) => {
 })
 
 server.get('/service-a', (req, res) => {
-    axios.get('http://bbox:9090/').then(function (response){
+    axios.get('http://1c21-tp-1_bbox_1:9090/').then(function (response){
         res.send(response.data)
     }).catch(function (error){ console.log(error) });
 })
 
 server.get('/service-b', (req, res) => {
-    axios.get('http://bbox:9091/').then(function (response) {
+    axios.get('http://1c21-tp-1_bbox_1:9091/').then(function (response) {
         res.send(response.data)
     });
 })

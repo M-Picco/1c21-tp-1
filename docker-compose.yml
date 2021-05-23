@@ -3,12 +3,9 @@ version: '2'
 services:
     node:
         build: ./app
-        ports:
-            - "9000:9000"
         links:
             - bbox
-        networks:
-            - network_1
+
 
     bbox:
         image: arqsoft/bbox:202101.1
@@ -17,8 +14,7 @@ services:
             - "9091:9091"
         volumes:
             - ./bbox.properties:/opt/bbox/config.properties
-        networks:
-            - network_1
+
 
     nginx:
         image: nginx:1.19.8
@@ -29,8 +25,7 @@ services:
             - ./store/static/files:/static:ro
         links:
             - node
-        networks:
-            - network_1
+
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.7-11
@@ -41,8 +36,7 @@ services:
             - "8090:80"
             - "8125:8125/udp"
             - "8126:8126"
-        networks:
-            - network_1
+
 
     grafana:
         image: grafana/grafana:7.3.10
@@ -50,8 +44,7 @@ services:
             - "80:3000"
         volumes:
             - "grafana_config:/var/lib/grafana"
-        networks:
-            - network_1
+
 
     cadvisor:
         image: gcr.io/cadvisor/cadvisor:v0.39.0
@@ -65,12 +58,8 @@ services:
             - "/var/run:/var/run:rw"
             - "/sys:/sys:ro"
             - "/var/lib/docker/:/var/lib/docker:ro"
-        networks:
-            - network_1
+
 
 volumes:
     grafana_config:
         driver: local
-
-networks:
-    network_1:
