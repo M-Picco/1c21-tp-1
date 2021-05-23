@@ -10,20 +10,20 @@ config:
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
-phases:
-    - name: BeginPad
-      duration: 30
-      arrivalRate: 0
-    - name: Ramp
-      duration: 30 
-      arrivalRate: 0
-      rampTo: 10
-    - name: Plain
-      duration: 60
-      arrivalRate: 10
-    - name: EndPad
-      duration: 30
-      arrivalRate: 0
+  phases:
+      - name: BeginPad
+        duration: 30
+        arrivalRate: 0
+      - name: Ramp
+        duration: 30 
+        arrivalRate: 0
+        rampTo: 10
+      - name: Plain
+        duration: 60
+        arrivalRate: 10
+      - name: EndPad
+        duration: 30
+        arrivalRate: 0
 
 scenarios:
   - name: Loop (/loop)
