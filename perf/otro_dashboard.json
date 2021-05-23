@@ -15,8 +15,8 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 0,
-    "id": 3,
-    "iteration": 1621476420055,
+    "id": 5,
+    "iteration": 1621731152720,
     "links": [],
     "panels": [
         {
@@ -257,7 +257,7 @@
             "percentage": false,
             "pluginVersion": "7.3.10",
             "pointradius": 5,
-            "points": true,
+            "points": false,
             "renderer": "flot",
             "seriesOverrides": [],
             "spaceLength": 10,
@@ -364,7 +364,7 @@
             "percentage": false,
             "pluginVersion": "7.3.10",
             "pointradius": 5,
-            "points": true,
+            "points": false,
             "renderer": "flot",
             "seriesOverrides": [],
             "spaceLength": 10,
@@ -473,7 +473,7 @@
             "percentage": false,
             "pluginVersion": "7.3.10",
             "pointradius": 5,
-            "points": true,
+            "points": false,
             "renderer": "flot",
             "seriesOverrides": [],
             "spaceLength": 10,
@@ -675,7 +675,7 @@
             "percentage": false,
             "pluginVersion": "7.3.10",
             "pointradius": 5,
-            "points": true,
+            "points": false,
             "renderer": "flot",
             "seriesOverrides": [
                 {
@@ -772,6 +772,7 @@
                     "spaceLength": 10,
                     "stack": false,
                     "steppedLine": false,
+                    "target": "",
                     "targets": [
                         {
                             "hide": false,
@@ -865,7 +866,7 @@
             }
         }
     ],
-    "refresh": false,
+    "refresh": "5s",
     "schemaVersion": 26,
     "style": "dark",
     "tags": [],
@@ -958,8 +959,8 @@
         ]
     },
     "time": {
-        "from": "2021-05-20T01:40:00.000Z",
-        "to": "2021-05-20T01:41:20.000Z"
+        "from": "now-15m",
+        "to": "now"
     },
     "timepicker": {
         "refresh_intervals": [
@@ -987,7 +988,7 @@
         ]
     },
     "timezone": "",
-    "title": "Otro dashboard 2",
+    "title": "Hernan",
     "uid": "arxIPaank",
-    "version": 2
+    "version": 1
 }
