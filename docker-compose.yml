@@ -6,12 +6,11 @@ services:
         links:
             - bbox
 
-
     bbox:
         image: arqsoft/bbox:202101.1
         ports:
-            - "9090:9090"
-            - "9091:9091"
+            - 9090
+            - 9091
         volumes:
             - ./bbox.properties:/opt/bbox/config.properties
 
