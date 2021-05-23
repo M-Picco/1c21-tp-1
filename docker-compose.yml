@@ -5,6 +5,8 @@ services:
         build: ./app
         links:
             - bbox
+        ports:
+            - 9000
 
     bbox:
         image: arqsoft/bbox:202101.1
