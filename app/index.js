@@ -22,11 +22,11 @@ server.get('/service-b', (req, res) => {
 })
 
 server.get('/loop', (req, res) => {
-    var stop = new Date().getTime()+5000;
-    while (new Date().getTime() < stop) {
+    var i = 0
+    for (i=0; i < 1000; i++){
         var number = 57361671 * Math.random();
-        var result = number/7;
-        if (result > 0){
+        var result = number / 7;
+        if (result > 0) {
         }
     }
     res.send('Hello World!')
